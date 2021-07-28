@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300|Source+Sans+Pro:200,400,600');
+
+:root {
+/*
+--blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+*/
+
+/*    Override Variables*/
+    --font-family-sans-serif: 'Source Sans Pro', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --gray-dark: #404040;
+    --purple: #533777;
+    --primary:#66CCFF;
+    --secondary:#CC99CC;
+    
+/*    Page Variables*/
+    --light-blue: #66CCFF;
+    --light-purple: #c290d2;
+    --font-family-serif: Merriweather, serif;
+    --color-text: var(--gray-dark);
+    --font-family-text: var(--font-family-serif);
+    --primary-text: 'Roboto Slab', serif;
+    --secondary-text: 'Strawberry Whipped Cream', sans-serif;
+}
+
+/************** BASE STYLES ***************/
+* {box-sizing: border-box}
+body { font-family: 'Roboto Slab', serif; font-size: 1em; line-height: 1.4; color: #000000; margin: 0; }
+input, button {font-family: inherit; font-size: inherit; }
+a { color: #000000; text-decoration: none; }
+a:hover {text-decoration: underline; color: #000000;}
+ul { padding: 0; margin: 0; list-style: none; }
+nav { padding: 0 0; }
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+p {font-size: 1em;}
+
+/*****************************************/
+.space-between {justify-content: space-between;}
+
+body {
+    position: relative;
+    min-height: 100%;
+}
+
+.hero {
+    background: url(../img/hero.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100%;
+    height: 700px;
+    font-family: var(--secondary-text);
+}
+
+.hero h1 {
+    padding-left: 3em;
+}
+
+.header-icon {
+    width: 60%
+}
+
+.navbar {
+    background-color: var(--light-blue)
+}
+
+nav .nav-link {
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 2px;
+}
+
+nav .nav-link:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 100px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--light-purple);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-out;
+}
+
+nav .nav-link:hover:before {
+    visibility: visible;
+    left: 0;
+    transform: scaleX(1);
+}
+
+.container-fluid {
+    max-width: 1520px;
+}
+
+.categories a:hover {
+    opacity: 0.9;
+}
+
+footer {
+    background-color: var(--light-purple);
+}
+
+footer .container-fluid {
+    max-width: 1420px;
+}
+.link-header {
+    font-weight: 700;
+    font-size: 1rem;
+    
+}
+
+
+
+footer a {
+    color: #FFFFFF; 
+    font-size: 0.875rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+.layout-social .layout-icon {
+    font-size: 1.5em;
+}
+.copyright {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 0.75rem;
+    text-align: center;
+    opacity: 70%
+}
+
+/* Catalogue */
+
+.catalogue {
+    padding-top: 2em;
+}
+
+.catalogue h4 {
+    text-decoration: underline;
+}
+
+.catalogue a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+.catalogue-item span {
+    font-size: .8em;
+    opacity: .75;
+}
+
+
+.catalogue p {
+    margin-bottom: 0;
+}
+
+/* Find Us */
+
+.findus {
+    padding-top: 2em;
+}
+
+.location {
+    margin-left: 5px;
+}
+
+#map_melbourne {
+    position: relative;
+    width: 373px;
+    height; 373px;
+}
+
+#map_geelong {
+    position: relative;
+    width: 373px;
+    height; 373px;
+}
+
+#map_sydney {
+    position: relative;
+    width: 373px;
+    height; 373px;
+}
+
+#map_brisbane {
+    position: relative;
+    width: 373px;
+    height; 373px;
+}
+
+/* Media Queries */
+
+@media screen and (min-width:1200px) {
+    .hero {
+        padding-top: 2em;
+    }
+    
+    #map_melbourne {
+        float: left;
+    }
+    
+    #map_geelong {
+        float: left;
+    }
+    
+    #map_sydney {
+        float: left;
+    }
+    
+    #map_brisbane {
+        float: left;
+    }
+    
+    .location {
+        position: relative;
+        top: 45%;
+        transform: translateY(-45%);
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .categories {
+        padding-top: 2em;
+    }
+    
+    .location {
+        padding-top: .5em;
+        
+    }
+}
+
+@media screen and (max-width:854px) {
+    #map_melbourne {
+        width: 250px;
+        height: 250px;
+        display: relative;
+    }
+    
+    #map_geelong {
+        width: 250px;
+       height: 250px;
+       position: relative;
+    }
+    
+    #map_sydney {
+        width: 250px;
+       height: 250px;
+       position: relative;
+    }
+    
+    #map_brisbane {
+        width: 250px;
+       height: 250px;
+       position: relative;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .site-header .navbar-collapse {
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px;
+    }
+    .hero h1 {
+        padding-left: 2em;
+    }
+    
+    .link-header {
+        padding-top: 1em;
+    }
+    
+     .catalogue-item:nth-of-type(3) {
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .hero {
+        background-position: center top;
+        background-size: auto;
+    }
+    
+    .catalogue h3 {
+        padding-bottom: .5em;
+    }
+    
+    .catalogue-item {
+        padding-bottom: 2em;
+    }
+    
+}
