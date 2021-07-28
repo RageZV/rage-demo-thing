@@ -195,28 +195,10 @@ footer a:hover {
     margin-left: 5px;
 }
 
-#map_melbourne {
-    position: relative;
-    width: 373px;
-    height; 373px;
-}
-
-#map_geelong {
-    position: relative;
-    width: 373px;
-    height; 373px;
-}
-
-#map_sydney {
-    position: relative;
-    width: 373px;
-    height; 373px;
-}
-
-#map_brisbane {
-    position: relative;
-    width: 373px;
-    height; 373px;
+.map {
+    width: 400px;
+    height: 300px;
+    display: relative;
 }
 
 /* Media Queries */
@@ -261,29 +243,12 @@ footer a:hover {
 }
 
 @media screen and (max-width:854px) {
-    #map_melbourne {
+    .map {
         width: 250px;
         height: 250px;
         display: relative;
     }
     
-    #map_geelong {
-        width: 250px;
-       height: 250px;
-       position: relative;
-    }
-    
-    #map_sydney {
-        width: 250px;
-       height: 250px;
-       position: relative;
-    }
-    
-    #map_brisbane {
-        width: 250px;
-       height: 250px;
-       position: relative;
-    }
 }
 
 @media screen and (max-width: 768px) {
